@@ -32,8 +32,6 @@ The dataset is stored locally in `data/raw/m5-forecasting-accuracy/`:
 
 Raw data and generated outputs are excluded from Git. Put notebooks in `notebooks/`, reusable code in `src/`, and generated tables or figures in `outputs/`.
 
-On this computer, the raw CSV paths are hard links to the originals in Downloads to avoid storing two copies. Treat raw files as read-only: editing one of these files also changes its Downloads counterpart.
-
 To check the files from Python:
 
 ```python
