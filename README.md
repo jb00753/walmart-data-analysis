@@ -2,6 +2,8 @@
 
 A workspace for exploring the M5 Walmart sales dataset. The project questions are in [docs/questions.md](docs/questions.md).
 
+For local database setup, see [docs/postgresql_setup.md](docs/postgresql_setup.md).
+
 ## Set up on Windows (PowerShell)
 
 If Anaconda is installed with pandas, NumPy, Matplotlib, Seaborn, and JupyterLab, open an Anaconda Prompt in this folder and run:
