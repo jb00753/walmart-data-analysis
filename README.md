@@ -1,6 +1,6 @@
 # Walmart data analysis
 
-A workspace for exploring Walmart sales data. The dataset and analysis question are still to be confirmed.
+A workspace for exploring the M5 Walmart sales dataset. The analysis question is still to be chosen.
 
 ## Set up on Windows (PowerShell)
 
@@ -20,10 +20,34 @@ python -m pip install -r requirements.txt
 
 If PowerShell blocks activation, use `.\.venv\Scripts\python.exe` in place of `python` without activating the environment.
 
-Place source files in `data/raw/`. Raw data and generated outputs are excluded from Git. Put notebooks in `notebooks/`, reusable code in `src/`, and generated tables or figures in `outputs/`.
+The dataset is stored locally in `data/raw/m5-forecasting-accuracy/`:
+
+| File | Contents |
+| --- | --- |
+| `calendar.csv` | Dates, week identifiers, events, and SNAP flags |
+| `sell_prices.csv` | Weekly item prices by store |
+| `sales_train_validation.csv` | Daily unit sales through the validation period |
+| `sales_train_evaluation.csv` | Daily unit sales through the evaluation period |
+| `sample_submission.csv` | Forecast submission format |
+
+Raw data and generated outputs are excluded from Git. Put notebooks in `notebooks/`, reusable code in `src/`, and generated tables or figures in `outputs/`.
+
+To check the files from Python:
+
+```python
+from pathlib import Path
+import pandas as pd
+
+data_dir = Path("data/raw/m5-forecasting-accuracy")
+calendar = pd.read_csv(data_dir / "calendar.csv")
+sales_sample = pd.read_csv(data_dir / "sales_train_evaluation.csv", nrows=100)
+print(calendar.shape, sales_sample.shape)
+```
+
+The sales tables have more than 1,900 columns, so start with a small sample before loading a full table into memory.
 
 ## Next steps
 
-1. Confirm and add the intended dataset.
-2. Record the data source, fields, and analysis question here.
-3. Create an initial exploration notebook once the dataset is known.
+1. Choose an analysis question or forecasting goal.
+2. Record the original dataset source and any assumptions here.
+3. Create an exploration notebook in `notebooks/`.
