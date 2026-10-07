@@ -1,6 +1,6 @@
 # Walmart data analysis
 
-A workspace for exploring the M5 Walmart sales dataset. The analysis question is still to be chosen.
+A workspace for exploring the M5 Walmart sales dataset. The project questions are in [docs/questions.md](docs/questions.md).
 
 ## Set up on Windows (PowerShell)
 
@@ -32,6 +32,8 @@ The dataset is stored locally in `data/raw/m5-forecasting-accuracy/`:
 
 Raw data and generated outputs are excluded from Git. Put notebooks in `notebooks/`, reusable code in `src/`, and generated tables or figures in `outputs/`.
 
+On this computer, the raw CSV paths are hard links to the originals in Downloads to avoid storing two copies. Treat raw files as read-only: editing one of these files also changes its Downloads counterpart.
+
 To check the files from Python:
 
 ```python
@@ -48,6 +50,6 @@ The sales tables have more than 1,900 columns, so start with a small sample befo
 
 ## Next steps
 
-1. Choose an analysis question or forecasting goal.
+1. Work through the questions in [docs/questions.md](docs/questions.md) at your own pace.
 2. Record the original dataset source and any assumptions here.
 3. Create an exploration notebook in `notebooks/`.
